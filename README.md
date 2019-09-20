@@ -22,7 +22,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ### Launch the project
 
 Follow steps in rubric as required to validate end to end flow.
-[![Video](https://github.com/lmidy/reactnd-wouldyourather/blob/ComponentswRedux/2019-Udacity%20ReactwRedux%20-%20Would%20you%20rather.gif)
+[![Video](https://github.com/lmidy/Final-WYRather/blob/master/2019-Udacity%20ReactwRedux%20-%20Would%20you%20rather.gif)
 
 
 ### Known Bugs
