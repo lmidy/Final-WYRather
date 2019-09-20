@@ -153,16 +153,7 @@ body {
 
 
 
-.close-create-contact {
-  display: block;
-  width: 60px;
-  height: 60px;
-  background-image: url('./icons/avatar1.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 30px;
-  font-size: 0;
-}
+
 
 .create-contact-form {
   padding: 20px;
@@ -175,16 +166,7 @@ body {
   margin-left: 20px;
 }
 
-.create-contact-avatar-input {
-  min-width: 60px;
-  height: 60px;
-  background-color: white;
-  background-image: url('./icons/avatar1.png');
-  background-size: 32px 32px;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 50%;
-}
+
 
 .create-contact-details input {
   width: 100%;
@@ -221,28 +203,7 @@ body {
   display: flex;
 }
 
-.search-contacts {
-  width: 100%;
-  padding: 20px 20px 20px 60px;
-  background-image: url('./icons/avatar1.png');
-  background-repeat: no-repeat;
-  background-position: 20px center;
-  background-size: 1.2em;
-  font-size: 1.2em;
-  border: 0;
-  outline: none;
-}
 
-.add-contact {
-  display: block;
-  width: 73px;
-  background: white;
-  background-image: url('./icons/avatar1.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 28px;
-  font-size: 0;
-}
 
 .showing-contacts {
   text-align: center;
@@ -321,20 +282,4 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.contact-remove {
-  padding-left: 20px;
-  align-self: center;
-  width: 32px;
-  height: 32px;
-  background-color: transparent;
-  background-image: url('./icons/avatar1.png');
-  background-size: 100% 100%;
-  border: 0;
-  color: black;
-  font-size: 0;
-  vertical-align: middle;
-  cursor: pointer;
-  outline: none;
 }
