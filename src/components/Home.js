@@ -11,9 +11,7 @@ class Home extends Component {
 
  //  addmorequestions() {
  //   if (...allQuestions.unaswered.length) ) {
- //     return <Redirect to='/add' />
- //   }
- // }
+
   render() {
     const { allQuestions } = this.props;
     const color = 'blue';
