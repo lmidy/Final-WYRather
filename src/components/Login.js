@@ -3,7 +3,6 @@ import {Header, Form, Segment, Dimmer, Loader, Grid} from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { setAuthedUser } from '../actions/authedUser';
-//import { Redirect } from 'react-router-dom'
 
 
 export class Login extends Component {

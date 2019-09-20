@@ -8,6 +8,12 @@ class Home extends Component {
   static propTypes = {
     allQuestions: PropTypes.object.isRequired
   }
+
+ //  addmorequestions() {
+ //   if (...allQuestions.unaswered.length) ) {
+ //     return <Redirect to='/add' />
+ //   }
+ // }
   render() {
     const { allQuestions } = this.props;
     const color = 'blue';
@@ -38,9 +44,7 @@ class Home extends Component {
               votedQuestion={false}
             />
           ))}
-
           <Segment disabled>Add more questions</Segment>
-
         </Tab.Pane>
       )
     },
