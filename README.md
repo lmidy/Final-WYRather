@@ -27,6 +27,4 @@ Follow steps in rubric as required to validate end to end flow.
 
 ### Known Bugs
 
-Login - 4 - Once a user logs out need to remove path history so when new user logins he/she isn't directed to path of former user that was logged in
-
 Minor - Added label in the would you rather widget I am not passing props to populate the date when a question is getting answered and when a user is viewing results. I may end up removing this entirely if this gets rejected for some reason
