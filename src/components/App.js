@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import { Grid } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 import { handleInitialData } from '../actions/shared'
@@ -16,11 +16,18 @@ class App extends Component {
   componentDidMount() {
     this.props.dispatch(handleInitialData())
   }
+
+  redirection() {
+   if (!this.props.authedUser) {
+     return <Redirect to='/' />
+   }
+ }
   render() {
     const { authedUser } = this.props;
     return (
       <Router>
         <div align='center'>
+         {this.redirection()}
             {authedUser === null ? (
               <Route
                 render={() => (

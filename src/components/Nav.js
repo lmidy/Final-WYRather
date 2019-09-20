@@ -10,8 +10,12 @@ class Nav extends Component {
   handleLogout = e => {
     e.preventDefault();
 
-
+    const { authedUser } = this.props;
     this.props.unsetAuthedUser(null);
+    sessionStorage.clear();
+    sessionStorage.removeItem(authedUser);
+    sessionStorage.clear();
+    this.setState({ redirect: true });
     if (this.props.unsetAuthedUser === null) {
       return <Redirect to='/' />
     }
