@@ -1,5 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Project Background
 
 Starter help: [https://github.com/udacity/reactnd-project-would-you-rather-starter](https://github.com/udacity/reactnd-project-would-you-rather-starter)
