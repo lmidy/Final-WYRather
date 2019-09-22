@@ -1,5 +1,5 @@
-import React , { Component, Fragment } from 'react';
-import { NavLink, Redirect } from 'react-router-dom';
+import React, { Component, Fragment } from 'react';
+import { NavLink } from 'react-router-dom';
 import { connect} from 'react-redux'
 import { setAuthedUser, unsetAuthedUser } from '../actions/authedUser';
 import { Image, Menu, Responsive, Grid, Icon, Button, Container } from 'semantic-ui-react'
@@ -9,16 +9,7 @@ class Nav extends Component {
 
   handleLogout = e => {
     e.preventDefault();
-
-    const { authedUser } = this.props;
     this.props.unsetAuthedUser(null);
-    sessionStorage.clear();
-    sessionStorage.removeItem(authedUser);
-    sessionStorage.clear();
-    this.setState({ redirect: true });
-    if (this.props.unsetAuthedUser === null) {
-      return <Redirect to='/' />
-    }
   };
 
 

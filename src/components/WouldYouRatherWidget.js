@@ -34,7 +34,7 @@ export class WouldYouRatherWidget extends Component {
     question: PropTypes.object,
     author: PropTypes.object,
     bodyType: PropTypes.string,
-    qid: PropTypes.string
+    question_id: PropTypes.string
   };
     render() {
       const {
@@ -52,7 +52,7 @@ export class WouldYouRatherWidget extends Component {
 
       return (
         <Card.Group centered>
-          <Card id='{qid}'>
+          <Card id='{question_id}'>
            <Card.Content>
             <Image
                src={author.avatarURL}

@@ -4,28 +4,23 @@ import WouldYouRatherWidget from './WouldYouRatherWidget';
 import { Container, Tab, Segment} from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
-class Home extends Component {
+export class Home extends Component {
   static propTypes = {
     allQuestions: PropTypes.object.isRequired
-  }
-
- //  addmorequestions() {
- //   if (...allQuestions.unaswered.length) ) {
+  };
 
   render() {
     const { allQuestions } = this.props;
     const color = 'blue';
 
-
     return (
       <Container>
-        <Tab widths={2} menu={{color, inverted: true, attached: false, tabular: false }} panes={panes({ allQuestions })} />
-      </Container>
-    );
-
-  }
+       <Tab widths={2} menu={{color, inverted: true, attached: false, tabular: false }} panes={panes({ allQuestions })} />
+     </Container>
+   );
+ }
 }
-//TODO: Condition so that when table is empty they are directed to add
+
 
   const panes = props => {
   const { allQuestions } = props;
@@ -81,4 +76,4 @@ function mapStateToProps ({ questions, users, authedUser }){
   };
 }
 
-export default connect(mapStateToProps)(Home)
+export default connect(mapStateToProps)(Home);
