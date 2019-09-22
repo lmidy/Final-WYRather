@@ -1,6 +1,4 @@
 import React, { Component, Fragment } from 'react';
-//mport { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
-import { Loader } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { handleInitialData } from '../actions/shared';
 import Login from './Login';
@@ -13,24 +11,10 @@ class App extends Component {
   }
 
   render() {
-  		const { authedUser, loadingBar } = this.props;
-
-  		if (loadingBar.default === undefined || loadingBar.default === 1) {
-
-  			return (
-  				<div>
-  					<Loader active>
-  						Loading ...
-              </Loader>
-
-  				</div>
-  			);
-  		} else {
+  		const { authedUser } = this.props;
   			return <Fragment>{!authedUser ? <Login /> : <PrivateApp />}</Fragment>;
-  		}
   	}
   }
-
 
 function mapStateToProps ({authedUser}) {
   return {

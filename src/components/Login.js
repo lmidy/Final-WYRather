@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 //import { Redirect } from 'react-router-dom'
 import PropTypes from 'prop-types';
 import { setAuthedUser } from '../actions/authedUser';
-import auth from './auth';
 
 
 export class Login extends Component {
@@ -73,10 +72,6 @@ class LoginForm extends Component {
     e.preventDefault();
     const { onLoading, setAuthedUser}  = this.props;
     const authedUser = this.state.value;
-
-    auth.login(() => {
-
-            });
 
     new Promise((res, rej) => {
       onLoading();

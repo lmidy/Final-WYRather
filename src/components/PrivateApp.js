@@ -1,5 +1,5 @@
-import React, { Component, Fragment } from 'react'
-import { BrowserRouter as Router, Route, Switch, Redirect, withRouter } from 'react-router-dom'
+import React, { Component, Fragment } from 'react';
+import { BrowserRouter as Router, Route, Switch, withRouter} from 'react-router-dom'
 import { Grid } from 'semantic-ui-react'
 import Nav from './Nav'
 import Home from './Home'
@@ -9,34 +9,23 @@ import WouldYouRatherWidget from './WouldYouRatherWidget'
 import Leaderboard from './Leaderboard'
 
 class PrivateApp extends Component {
-    componentDidMount() {
-      this.props.handleInitialData()
-    }
-
-    redirection() {
-     if (this.props.authedUser) {
-       console.log('hello' +this.props.authedUser);
-     }else {
-       return <Redirect to='/' />
-     }
-   }
     render() {
       return (
         <Router>
           <div align='center'>
-                  <Fragment>
-                    <Nav />
-                    <AppGrid>
-                      <Switch>
-                        <Route exact path="/" component={ Home } />
-                        <Route path="/questions/:question_id" component={ WouldYouRatherWidget } />
-                        <Route path="/add" component={ Add } />
-                        <Route path="/leaderboard" component={ Leaderboard} />
-                        <Route component={ Error_Page } />
-                      </Switch>
-                    </AppGrid>
-                  </Fragment>
-              )}
+            <Fragment>
+              <Nav />
+              <AppGrid>
+                <Switch>
+                  <Route path="/" exact component={withRouter(Home) } />
+                  <Route path="/questions/:question_id" component={ WouldYouRatherWidget } />
+                  <Route path="/questions/error_Page" component={ Error_Page } />
+                  <Route path="/add" component={ Add } />
+                  <Route path="/leaderboard" component={ Leaderboard} />
+                  <Route component={ Error_Page } />
+                </Switch>
+              </AppGrid>
+            </Fragment>
           </div>
         </Router>
     );

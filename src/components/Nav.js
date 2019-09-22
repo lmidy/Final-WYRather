@@ -6,12 +6,10 @@ import { Image, Menu, Responsive, Grid, Icon, Button, Container } from 'semantic
 
 
 class Nav extends Component {
-
   handleLogout = e => {
     e.preventDefault();
     this.props.unsetAuthedUser(null);
   };
-
 
   render() {
     const { authedUser, users } = this.props;
