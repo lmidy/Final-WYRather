@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import {Header, Form, Segment, Dimmer, Loader, Grid} from 'semantic-ui-react';
 import { connect } from 'react-redux';
+//import { Redirect } from 'react-router-dom'
 import PropTypes from 'prop-types';
 import { setAuthedUser } from '../actions/authedUser';
 
@@ -10,7 +11,7 @@ export class Login extends Component {
     loading: false
   };
   handleLoading = () => {
-    this.setState({ loading: true });
+    this.setState({ loading: true })
   };
 
   render() {
@@ -71,7 +72,6 @@ class LoginForm extends Component {
     e.preventDefault();
     const { onLoading, setAuthedUser}  = this.props;
     const authedUser = this.state.value;
-    //console.log('calling after submit' +authedUser)
 
     new Promise((res, rej) => {
       onLoading();
