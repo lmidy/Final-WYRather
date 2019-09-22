@@ -18,8 +18,8 @@ class PrivateApp extends Component {
               <AppGrid>
                 <Switch>
                   <Route path="/" exact component={withRouter(Home) } />
-                  <Route path="/questions/:question_id" component={ WouldYouRatherWidget } />
                   <Route path="/questions/error_Page" component={ Error_Page } />
+                  <Route path="/questions/:question_id" component={ WouldYouRatherWidget } />
                   <Route path="/add" component={ Add } />
                   <Route path="/leaderboard" component={ Leaderboard} />
                   <Route component={ Error_Page } />
